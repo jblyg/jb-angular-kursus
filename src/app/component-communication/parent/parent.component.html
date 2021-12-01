@@ -1,0 +1,5 @@
+<h2>Parent</h2>
+<button (click)="sendData()">Send data to Child</button>
+<hr>
+Data from Child: {{dataFromChild}}
+<app-child [dataReceived]="toSend" (outputData)="outputReceiver($event)"></app-child>

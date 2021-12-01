@@ -1,0 +1,5 @@
+<h2>Alle mine kontakter {{result}}</h2>
+
+<div *ngFor="let contact of contactList">
+    <app-contact-info [contact]="contact"></app-contact-info>
+</div>

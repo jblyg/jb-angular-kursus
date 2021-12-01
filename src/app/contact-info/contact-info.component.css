@@ -1,0 +1,20 @@
+.contact-card {
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    padding: 10px;
+}
+
+.table-line {
+   display: flex; 
+   justify-content: space-between;
+}
+
+.label {
+    font-style: italic;
+    width: 50%;
+}
+
+.value {
+    font-weight: bolder;
+    width: 50%;
+}
