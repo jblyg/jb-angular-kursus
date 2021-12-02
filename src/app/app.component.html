@@ -1,9 +1,22 @@
-<H1>Hej {{ name }}</H1>
-<hr>
+<!-- <H1>Hej {{ name }}</H1>
+<hr> -->
+
+<nav>
+    <span [routerLink]="['home']">Home</span>
+    <span routerLink='products'>Products</span>
+    <span routerLink='contacts'>Contacts</span>
+    <span routerLink='about'>About us</span>
+    <span routerLink='orders'>Orders</span>
+</nav>
+<router-outlet></router-outlet>
+
+
+<button (click)="goToAbout()">About us</button>
+
 <!-- <app-contact-info></app-contact-info> -->
 
 <!-- <app-parent></app-parent> -->
 
 <!-- <app-contact-list></app-contact-list> -->
 
-<app-product-list></app-product-list>
+<!-- <app-product-list></app-product-list> -->

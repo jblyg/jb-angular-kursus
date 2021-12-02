@@ -5,20 +5,18 @@
     </div>
     <div class="table-line">
         <span class="label">Beskrivelse: </span>
-        <span class="value">{{ product?.description }}</span>
+        <span class="value">{{ product!.description | convertText: "ae": "æ"}}</span>
     </div>
         <div class="table-line">
         <span class="label">Pris: </span>
-        <span class="value">{{ product?.price }}</span>
+        <span class="value">{{ product?.price | currency: "dkk":"symbol":"1.2-2" }}</span>
     </div>
     
     <div class="table-line">
         <span class="label">Rating: </span>
         <span class="value">{{ product?.rating }}</span>
     </div>
-<!--         
-    <div><h3>Detaljer</h3></div>
-         -->
+
     <div class="table-line">
         <span class="label">Mål: </span>
         <span class="value">H:{{ product?.details?.height }}, B:{{ product?.details?.width }}, L:{{ product?.details?.length }}</span>
@@ -29,17 +27,9 @@
         <span class="value">{{ product?.details?.weight }}</span>
     </div>
     
-    <div class="table-line">
+    <div class="table-line" *ngIf="showImage">
         <div class="product-image">
             <img  src="{{product?.imageUrl}}" height="100px" width="100px" />
         </div>
     </div>
-    <!-- <div class="table-line">
-        <span class="label">Telefon: </span>
-        <span class="value">{{product?.phone}}</span>
-    </div>
-    <div class="table-line">
-        <span class="label">Email: </span>
-        <span class="value">{{product?.email}}</span>
-    </div>  -->
 </div>

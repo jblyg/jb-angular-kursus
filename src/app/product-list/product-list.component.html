@@ -1,3 +1,21 @@
-<div *ngFor="let product of products">
-    <app-product-info [product]="product"></app-product-info>
+<h2>Product list</h2>
+
+<div class="filter">
+    <span class="filter-label">Filter by: </span>
+    <input type="text" [(ngModel)]="listFilter" />
+    <button (click)="clearFilter()">Ryd</button>
 </div>
+<h3>Filtered by: {{listFilter}}</h3>
+<hr/>
+
+<ng-container *ngIf="products">
+  <button (click)="toggleImage()" type="button">
+    {{ doShowImages ? "Skjul" : "Vis" }} billeder
+  </button>
+  <div *ngFor="let product of filteredProducts">
+    <app-product-info
+      [product]="product"
+      [showImage]="doShowImages"
+    ></app-product-info>
+  </div>
+</ng-container>

@@ -15,5 +15,11 @@ export class HttpService {
     var response = this.http.get<Product[]>('http://localhost:3000/products');
     return response;
   }
+
+  getProduct(id: number): Observable<Product> {
+
+    var response = this.http.get<Product>('http://localhost:3000/products/'+id);
+    return response;
+  }
 }
 

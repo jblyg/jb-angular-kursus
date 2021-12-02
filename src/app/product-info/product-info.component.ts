@@ -8,6 +8,7 @@ import { Product } from '../models/product.interface';
 })
 export class ProductInfoComponent implements OnInit {
   @Input() product?: Product;
+  @Input() showImage: boolean = false;
   
   constructor() { }
 

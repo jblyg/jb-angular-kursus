@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    border-bottom: 1px solid darkblue;
+}
+
+nav span {
+    cursor: pointer;
+}
+
+nav span:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
